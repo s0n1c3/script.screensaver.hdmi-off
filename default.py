@@ -32,6 +32,7 @@ class Screensaver(xbmcgui.WindowXMLDialog):
 
 if __name__ == '__main__':
     print '1 Python Screensaver Started'
+    os.system('tvservice -o')
     screensaver_gui = Screensaver(
             'script-%s-main.xml' % __scriptname__,
             __path__,
