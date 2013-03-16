@@ -4,7 +4,7 @@ import xbmcgui
 import xbmc
 import os
 
-Addon = xbmcaddon.Addon('script.screensaver.xbian-hdmi-off')
+Addon = xbmcaddon.Addon('script.screensaver.xbian-hdmi-off-v2')
 
 __scriptname__ = Addon.getAddonInfo('name')
 __path__ = Addon.getAddonInfo('path')
