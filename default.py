@@ -32,15 +32,12 @@ class Screensaver(xbmcgui.WindowXMLDialog):
 
 if __name__ == '__main__':
     print '1 Python Screensaver Started'
-    #os.system('tvservice -o');
     screensaver_gui = Screensaver(
-            'window.xml',
+            'script-%s-main.xml' % __scriptname__,
             __path__,
             'default',
         )
     screensaver_gui.doModal()
     print '5 Python Screensaver Exited'
-    #os.system('tvservice -p')
-    #os.system('/etc/init.d/xbmc restart')    
     del screensaver_gui
     sys.modules.clear()
