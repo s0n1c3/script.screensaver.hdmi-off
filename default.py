@@ -4,7 +4,7 @@ import xbmcgui
 import xbmc
 import os
 
-Addon = xbmcaddon.Addon('script.screensaver.xbian-hdmi-off-v2')
+Addon = xbmcaddon.Addon('script.screensaver.xbian-hdmioff')
 
 __scriptname__ = Addon.getAddonInfo('name')
 __path__ = Addon.getAddonInfo('path')
@@ -40,5 +40,7 @@ if __name__ == '__main__':
         )
     screensaver_gui.doModal()
     print '5 Python Screensaver Exited'
+    os.system('tvservice -p')
+    os.system('/etc/init.d/xbmc restart')
     del screensaver_gui
     sys.modules.clear()
