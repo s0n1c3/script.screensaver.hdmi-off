@@ -41,6 +41,6 @@ if __name__ == '__main__':
     screensaver_gui.doModal()
     print '5 Python Screensaver Exited'
     os.system('tvservice -p')
-    os.system('/etc/init.d/xbmc restart')
+    os.system('sudo /etc/init.d/xbmc restart')
     del screensaver_gui
     sys.modules.clear()
