@@ -3,11 +3,6 @@
        name="HDMI Off"
        version="0.0.7"
        provider-name="Dlinny (anton.zm@gmail.com)">
-  <requires>
-         <import addon="xbmc.python" 
-                 version="2.1.0" 
-                 allowed-versions="(,3.1.1)" />
-  </requires>
   <extension point="xbmc.ui.screensaver"
              library="default.py" />
   <extension point="xbmc.addon.metadata">
