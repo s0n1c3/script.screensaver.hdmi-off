@@ -18,29 +18,23 @@ class Screensaver(xbmcgui.WindowXMLDialog):
             self.exit_callback = exit_callback
 
         def onScreensaverDeactivated(self):
-            print '3 ExitMonitor: sending exit_callback'
             self.exit_callback()
 
     def onInit(self):
-        print '2 Screensaver: onInit'
         self.monitor = self.ExitMonitor(self.exit)
 
     def exit(self):
-        print '4 Screensaver: Exit requested'
         self.close()
 
 
 if __name__ == '__main__':
-    print '1 Python Screensaver Started'
-    os.system('tvservice -o')
+    os.system('xrandr --output HDMI1 --off')
     screensaver_gui = Screensaver(
             'script-%s-main.xml' % __scriptname__,
             __path__,
             'default',
         )
     screensaver_gui.doModal()
-    print '5 Python Screensaver Exited'
-    os.system('tvservice -p')
-    xbmc.executebuiltin('XBMC.RestartApp()')
+    os.system('xrandr --output HDMI1 --auto')
     del screensaver_gui
     sys.modules.clear()
